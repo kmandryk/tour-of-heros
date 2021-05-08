@@ -3,6 +3,7 @@ version: 0.1
 phases:
   install:
     commands:
+      # add missing key
       - sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 1655A0AB68576280
       - echo installing nodejs...
       - curl -fsSL https://deb.nodesource.com/setup_lts.x | sudo -E bash -
@@ -24,5 +25,3 @@ phases:
 artifacts:
   files:
     - "**/*"
-  discard-paths: no
-  base-directory: dist/beer-catalogue
